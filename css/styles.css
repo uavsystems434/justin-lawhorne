@@ -530,7 +530,7 @@
          position: relative;
     }
      .my-projects {
-         background-image: url('../pics/WoodBack.webp');
+
          background-attachment: fixed;
          background-position: 50% 0 0 100%;
          background-image: rotate 45;
