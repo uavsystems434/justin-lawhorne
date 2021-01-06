@@ -556,7 +556,7 @@
     }
      .portfolio {
          background-color: var(--clr-dark);
-         background-image: url('../pics/starsback.png');
+         background-image: url('../pics/starsback.webp');
          background-attachment: fixed;
          background-repeat: no-repeat;
          background-size: cover;
@@ -716,7 +716,7 @@
     }
      .my-hobbies {
          background-color: var(--clr-dark);
-         background-image: url('../pics/starsback.png');
+         background-image: url('../pics/starsback.webp');
          background-attachment: fixed;
          background-repeat: no-repeat;
          background-size: cover;
