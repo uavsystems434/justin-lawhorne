@@ -278,7 +278,8 @@
          width: 165%;
     }
      .intro section {
-         margin: 0 auto height: -555 px;
+         margin: 0 auto;
+         height: -555 px;
     }
      .section__title--intro {
          display: inline-block;
