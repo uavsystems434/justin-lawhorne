@@ -344,7 +344,7 @@
          top: .8em;
          z-index: 1000;
     }
-     o .nav-open .nav {
+     .nav-open .nav {
          transform: translate(0);
     }
      .nav-open .nav-toggle {
