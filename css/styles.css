@@ -325,7 +325,7 @@
          overflow: hidden;
     }
      .section__title--projects {
-         background: url('../pics/starsback.png');
+         background: url('../pics/starsback.webp');
          width: 20rem;
          position: relative;
          margin: 2rem auto;
@@ -397,7 +397,7 @@
          border-radius: 25px;
     }
      .my-hobbies {
-         background: url('../pics/starsback.png');
+         background: url('../pics/starsback.webp');
          text-align: center;
     }
      footer {
@@ -446,7 +446,7 @@
          grid-row-gap: 1em;
     }
      .portfolio__item {
-         background: url('../pics/starsback.png');
+         background: url('../pics/starsback.webp');
          overflow: hidden;
     }
      .section__subtitle .section_subtitle--intro {
@@ -568,7 +568,7 @@
     }
      .portfolio {
          background-color: var(--clr-dark);
-         background-image: url('../pics/starsback.png');
+         background-image: url('../pics/starsback.webp');
          background-attachment: fixed;
          background-repeat: no-repeat;
          background-size: cover;
@@ -727,7 +727,7 @@
     }
      .my-hobbies {
          background-color: var(--clr-dark);
-         background-image: url('../pics/starsback.png');
+         background-image: url('../pics/starsback.webp');
          background-attachment: fixed;
          background-repeat: no-repeat;
          background-size: cover;
@@ -827,7 +827,7 @@
          margin: -1.1rem -2.3rem 0 auto;
     }
      .section__title--projects {
-         background: url('../pics/starsback.png');
+         background: url('../pics/starsback.webp');
          width: 20rem;
          position: relative;
          margin: 2rem auto;
@@ -1173,7 +1173,7 @@
     }
      .my-hobbies {
          background-color: var(--clr-dark);
-         background: url('../pics/starsback.png');
+         background: url('../pics/starsback.webp');
          background-attachment: fixed;
          text-align: center;
          overflow: hidden;
