@@ -19,8 +19,10 @@
      --fs-body: 1rem;
      --fs-middev: 5.5rem;
      --fs-ipad: 3.5rem;
+     --fs-squeeze: 3.1rem;
      --fs-smalldev: 4.25rem;
      --fs-email: 1.1rem;
+     --fs-orient: 3.25rem;
      --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25), 0.125em 0.125em 0.25 rgba(0,0,0,.15);
 }
  :root {
@@ -273,6 +275,180 @@
  .section__subtitle--intro {
      display: inline-block;
 }
+ @media (min-width: 400px) {
+     body {
+         justify-content: center;
+         align-items: center;
+    }
+     .about-me {
+         display: grid;
+         grid-template-columns: 1fr 200px;
+         grid-template-areas: "title img" "subtitle img" "text img";
+         grid-column-gap: 2em;
+    }
+     .section__title--about {
+         grid-area: title;
+    }
+     .section__subtitle--about {
+         grid-column: 1 / -1;
+         grid-row: 2;
+         position: relative;
+         width: calc(100% + 2em);
+         padding-left: .5em;
+         padding-right: calc(200px + 4em);
+    }
+     .intro__img {
+         width: 50%;
+    }
+     .section__subtitle--intro {
+         animation-name: text-slide;
+         animation-duration: 2s;
+         animation-iteration-count: 1;
+         animation-timing-function: ease;
+         animation-play-state: running;
+         width: 100%;
+         box-shadow: 10px 6px 16px var(--clr-dark);
+         border-radius: .35rem;
+    }
+     .nav-toggle {
+         padding: .75em;
+         background: transparent;
+         border: 0;
+         cursor: pointer;
+         position: fixed;
+        /* Changed from initial value 'absolute' for compatibility */
+         right: 1.5rem;
+         margin: 0 auto;
+         top: .8em;
+         z-index: 1000;
+    }
+     @keyframes text-slide {
+         from {
+             left: -100%;
+             background: var(--clr-white);
+        }
+         to {
+             right: 5%;
+        }
+    }
+     .about-me__img {
+         grid-area: img;
+         position: relative;
+         z-index: 2;
+         display: flex;
+         background: var(--clr-white);
+         border-radius: 555px 555px;
+    }
+     .my-hobbies {
+         background-color: var(--clr-dark);
+         background: url('../pics/starsback.png');
+         background-attachment: fixed;
+         text-align: center;
+         overflow: hidden;
+         width: 100%;
+         background-size: cover;
+    }
+     .section__subtitle--hobbies {
+        /* <------ COULD GO IN TYPOGRAPHY! */
+         color: var(--clr-accent);
+         font-weight: var(--fw-bold);
+         display: flex;
+         flex-grow: 1;
+         text-align: center;
+         margin: 0 auto;
+    }
+     .portfolio {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        /* <--- COULD HAVE A MAX WIDTH!*/
+         grid-column-gap: 1em;
+         grid-row-gap: 1em;
+         position: relative;
+         z-index: 5;
+    }
+     .portfolio__item {
+         background: var(--clr-accent);
+         overflow: hidden;
+         position: relative;
+         display: flex;
+         flex-direction: row-reverse;
+    }
+     .portfolio__jpg {
+         transition: transform 450ms cubic-bezier(.5, 0, .5, 1), opacity 250ms linear;
+         height: 500px;
+         width: 100%;
+    }
+     .portfolio__item:focus {
+         position:relative;
+         z-index: 2;
+    }
+     .portfolio__jpg:hover, .portfolio__item:focus .portfolio__jpg {
+         transform: scale(1.1);
+         opacity: .6;
+    }
+    /* ------Footer------ */
+     .footer {
+         background-image: url('../pics/WoodFooter.webp');
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: fixed;
+         transform: rotate(180);
+         color: var(--clr-white);
+         text-align: center;
+         padding: 2.5em 0;
+         font-size: var(--fs-h3);
+         filter: grayscale(25%);
+         align-items: center;
+         z-index: 10;
+    }
+     footer a {
+         color: inherit;
+    }
+     .footer__link {
+         font-weight: var(--fw-bold);
+         color: var(--clr-white);
+         text-decoration: none;
+    }
+     .footer__link:hover, .social-list__link:hover {
+         opacity: .7;
+         text-decoration: underline;
+         overflow: hidden;
+    }
+     .social-list {
+         list-style: none;
+         display: flex;
+         justify-content: center;
+         margin: .2em 2em 0em;
+         padding: 0;
+    }
+     .social-list__item {
+         margin: 0 .5em;
+         color: var(--clr-white);
+         font-size: 40px;
+    }
+     .social-list__link {
+         padding: .5em;
+    }
+     .copyright {
+         text-align: center;
+         position: relative;
+         bottom: -2.5rem;
+         text-shadow: 50px 50px black;
+    }
+     .copy__symbol {
+         position: static;
+         display: block;
+    }
+    /* ------Inidvidual Portfolio Item Styles------ */
+     .portfolio-item-individual {
+         padding: 0 2em 2em;
+         max-width: 1000px;
+         margin: 0 auto;
+    }
+     .portfolio-item-individual p {
+         max-width: 800px;
+    }
+}
  @media (min-width: 200px) and (max-width: 399px) {
      section {
          width: 165%;
@@ -325,7 +501,7 @@
          overflow: hidden;
     }
      .section__title--projects {
-         background: url('../pics/starsback.webp');
+         background: url('../pics/starsback.png');
          width: 20rem;
          position: relative;
          margin: 2rem auto;
@@ -397,7 +573,7 @@
          border-radius: 25px;
     }
      .my-hobbies {
-         background: url('../pics/starsback.webp');
+         background: url('../pics/starsback.png');
          text-align: center;
     }
      footer {
@@ -446,7 +622,7 @@
          grid-row-gap: 1em;
     }
      .portfolio__item {
-         background: url('../pics/starsback.webp');
+         background: url('../pics/starsback.png');
          overflow: hidden;
     }
      .section__subtitle .section_subtitle--intro {
@@ -531,7 +707,7 @@
          position: relative;
     }
      .my-projects {
-
+         background-image: url('../pics/smalldev.jpg');
          background-attachment: fixed;
          background-position: 50% 0 0 100%;
          background-image: rotate 45;
@@ -556,7 +732,7 @@
     }
      .portfolio {
          background-color: var(--clr-dark);
-         background-image: url('../pics/starsback.webp');
+         background-image: url('../pics/starsback.png');
          background-attachment: fixed;
          background-repeat: no-repeat;
          background-size: cover;
@@ -716,7 +892,7 @@
     }
      .my-hobbies {
          background-color: var(--clr-dark);
-         background-image: url('../pics/starsback.webp');
+         background-image: url('../pics/starsback.png');
          background-attachment: fixed;
          background-repeat: no-repeat;
          background-size: cover;
@@ -1126,189 +1302,21 @@
 }
  @media (min-width: 800px) and (max-width: 999px) {
      .section__title--intro {
-         font-size: var(--fs-h2);
+         font-size: var(--fs-squeeze);
     }
      .section__subtitle--about {
          border-radius: 5px 5px;
          right: .75rem;
          box-shadow: 10px 6px 16px var(--clr-dark);
     }
+     .section__subtitle--intro {
+         border-radius: .2rem;
+         top: 3.5rem;
+         z-index: 100;
+         box-shadow: 10px 6px 16px var(--clr-dark);
+    }
      .about-me__img {
          box-shadow: 6px 6px 16px var(--clr-dark);
-    }
-}
- @media (min-width: 400px) {
-     body {
-         justify-content: center;
-         align-items: center;
-    }
-     .about-me {
-         display: grid;
-         grid-template-columns: 1fr 200px;
-         grid-template-areas: "title img" "subtitle img" "text img";
-         grid-column-gap: 2em;
-    }
-     .section__title--about {
-         grid-area: title;
-    }
-     .section__subtitle--about {
-         grid-column: 1 / -1;
-         grid-row: 2;
-         position: relative;
-         width: calc(100% + 2em);
-         padding-left: .5em;
-         padding-right: calc(200px + 4em);
-    }
-     .intro__img {
-         width: 50%;
-    }
-     .section__subtitle--intro {
-         animation-name: text-slide;
-         animation-duration: 2s;
-         animation-iteration-count: 1;
-         animation-timing-function: ease;
-         animation-play-state: running;
-         width: 100%;
-         box-shadow: 10px 6px 16px var(--clr-dark);
-         border-radius: .35rem;
-    }
-     .nav-toggle {
-         padding: .75em;
-         background: transparent;
-         border: 0;
-         cursor: pointer;
-         position: fixed;
-        /* Changed from initial value 'absolute' for compatibility */
-         right: 1.5rem;
-         margin: 0 auto;
-         top: .8em;
-         z-index: 1000;
-    }
-     @keyframes text-slide {
-         from {
-             left: -100%;
-             background: var(--clr-white);
-        }
-         to {
-             right: 5%;
-        }
-    }
-     .about-me__img {
-         grid-area: img;
-         position: relative;
-         z-index: 2;
-         display: flex;
-         background: var(--clr-white);
-         border-radius: 555px 555px;
-    }
-     .my-hobbies {
-         background-color: var(--clr-dark);
-         background: url('../pics/starsback.webp');
-         background-attachment: fixed;
-         text-align: center;
-         overflow: hidden;
-         width: 100%;
-         background-size: cover;
-    }
-     .section__subtitle--hobbies {
-        /* <------ COULD GO IN TYPOGRAPHY! */
-         color: var(--clr-accent);
-         font-weight: var(--fw-bold);
-         display: flex;
-         flex-grow: 1;
-         text-align: center;
-         margin: 0 auto;
-    }
-     .portfolio {
-         display: grid;
-         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        /* <--- COULD HAVE A MAX WIDTH!*/
-         grid-column-gap: 1em;
-         grid-row-gap: 1em;
-         position: relative;
-         z-index: 5;
-    }
-     .portfolio__item {
-         background: var(--clr-accent);
-         overflow: hidden;
-         position: relative;
-         display: flex;
-         flex-direction: row-reverse;
-    }
-     .portfolio__jpg {
-         transition: transform 450ms cubic-bezier(.5, 0, .5, 1), opacity 250ms linear;
-         height: 500px;
-         width: 100%;
-    }
-     .portfolio__item:focus {
-         position:relative;
-         z-index: 2;
-    }
-     .portfolio__jpg:hover, .portfolio__item:focus .portfolio__jpg {
-         transform: scale(1.1);
-         opacity: .6;
-    }
-    /* ------Footer------ */
-     .footer {
-         background-image: url('../pics/WoodFooter.webp');
-         background-repeat: no-repeat;
-         background-size: cover;
-         background-position: fixed;
-         transform: rotate(180);
-         color: var(--clr-white);
-         text-align: center;
-         padding: 2.5em 0;
-         font-size: var(--fs-h3);
-         filter: grayscale(25%);
-         align-items: center;
-         z-index: 10;
-    }
-     footer a {
-         color: inherit;
-    }
-     .footer__link {
-         font-weight: var(--fw-bold);
-         color: var(--clr-white);
-         text-decoration: none;
-    }
-     .footer__link:hover, .social-list__link:hover {
-         opacity: .7;
-         text-decoration: underline;
-         overflow: hidden;
-    }
-     .social-list {
-         list-style: none;
-         display: flex;
-         justify-content: center;
-         margin: .2em 2em 0em;
-         padding: 0;
-    }
-     .social-list__item {
-         margin: 0 .5em;
-         color: var(--clr-white);
-         font-size: 40px;
-    }
-     .social-list__link {
-         padding: .5em;
-    }
-     .copyright {
-         text-align: center;
-         position: relative;
-         bottom: -2.5rem;
-         text-shadow: 50px 50px black;
-    }
-     .copy__symbol {
-         position: static;
-         display: block;
-    }
-    /* ------Inidvidual Portfolio Item Styles------ */
-     .portfolio-item-individual {
-         padding: 0 2em 2em;
-         max-width: 1000px;
-         margin: 0 auto;
-    }
-     .portfolio-item-individual p {
-         max-width: 800px;
     }
 }
  
