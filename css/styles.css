@@ -641,7 +641,7 @@
  @media (min-width: 400px) and (max-width: 599px) {
      section {
          display: block;
-          margin: 0;
+          margin: 0 auto;
           width: 165%;
     }
      .section__title--intro {
