@@ -20,7 +20,7 @@
      --fs-middev: 5.5rem;
      --fs-ipad: 3.5rem;
      --fs-squeeze: 3.1rem;
-     --fs-smalldev: 4.25rem;
+     --fs-smalldev: 4.05rem;
      --fs-email: 1.1rem;
      --fs-orient: 3.25rem;
      --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25), 0.125em 0.125em 0.25 rgba(0,0,0,.15);
@@ -341,7 +341,7 @@
     }
      .my-hobbies {
          background-color: var(--clr-dark);
-         background: url('../pics/starsback.png');
+         background: url('../pics/starsback.webp');
          background-attachment: fixed;
          text-align: center;
          overflow: hidden;
@@ -573,7 +573,7 @@
          border-radius: 25px;
     }
      .my-hobbies {
-         background: url('../pics/starsback.png');
+         background: url('../pics/starsback.webp');
          text-align: center;
     }
      footer {
@@ -732,7 +732,7 @@
     }
      .portfolio {
          background-color: var(--clr-dark);
-         background-image: url('../pics/starsback.png');
+         background-image: url('../pics/starsback.webp');
          background-attachment: fixed;
          background-repeat: no-repeat;
          background-size: cover;
@@ -892,7 +892,7 @@
     }
      .my-hobbies {
          background-color: var(--clr-dark);
-         background-image: url('../pics/starsback.png');
+         background-image: url('../pics/starsback.webp');
          background-attachment: fixed;
          background-repeat: no-repeat;
          background-size: cover;
