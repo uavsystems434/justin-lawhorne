@@ -661,9 +661,6 @@
          color: var(--clr-white);
          font-size: 1.5rem;
     }
-     .social-list__link {
-         padding: .5em;
-    }
      .nav-toggle {
          padding: .75em;
          background: transparent;
