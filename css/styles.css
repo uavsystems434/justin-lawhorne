@@ -337,6 +337,7 @@
          display: flex;
          background: var(--clr-white);
          border-radius: 555px 555px;
+         z-index: 10;
     }
      .my-hobbies {
          background-color: var(--clr-dark);
